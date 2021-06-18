@@ -108,7 +108,7 @@ def all_supplies_in_holidays(holiday_hash)
     # converts symbol to string, removes ":" splits into an array removing the "_" char, capitalizes each word in the array,
     # then joins it back into a string before printing
 
-    season = season.to_s.split("_").map {|word| word.capitalize!}.join(" ")
+    season = season.to_s.map {|word| word.capitalize!}.join(" ")
     puts "#{season}:"
 
     holidays.each do |holiday, items|
